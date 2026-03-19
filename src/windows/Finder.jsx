@@ -27,14 +27,18 @@ const Finder = () => {
             <h3>{name}</h3>
 
             <ul>
-                {items?.map((item) => (
-                    <li key={item.id} onClick={
-                        () => setActiveLocation(item)
-                    } className={clsx(activeLocation.id === item.id ? 'active' : 'not-active')}>
-                        <img src={item.icon} className='w-4' alt={item.name} />
-                        <p className='text-sm font-medium truncate'>{item.name}</p>
-                    </li>
-                ))}
+                {items?.map((item) => {
+                    const isActive = activeLocation.id === item.id;
+                    const activeClass = "bg-white/15 backdrop-blur-md border border-white/10 shadow-lg text-white";
+                    const inactiveClass = "bg-transparent hover:bg-white/5 hover:text-white text-[#e6e6e6]/60 border border-transparent";
+
+                    return (
+                        <li key={item.id} onClick={() => setActiveLocation(item)} className={clsx(`rounded-xl px-3 py-2 cursor-pointer flex items-center gap-3 transition-all duration-300`, isActive ? activeClass : inactiveClass)}>
+                            <img src={item.icon} className='w-4' alt={item.name} />
+                            <p className='text-sm font-medium truncate'>{item.name}</p>
+                        </li>
+                    )
+                })}
             </ul>
         </div>
 
@@ -52,9 +56,9 @@ const Finder = () => {
                 </div>
                 <ul className='content'>
                     {activeLocation?.children?.map((item) => (
-                        <li key={item.id} className={item.position} onClick={() => openItem(item)}>
-                            <img src={item.icon} alt={item.name} />
-                            <p>{item.name}</p>
+                        <li key={item.id} className={clsx(item.position, "absolute flex flex-col items-center gap-2 p-3 w-32 rounded-2xl border border-transparent hover:bg-white/10 hover:border-white/15 hover:shadow-2xl hover:backdrop-blur-md transition-all duration-300 cursor-pointer group")} onClick={() => openItem(item)}>
+                            <img src={item.icon} alt={item.name} className="w-14 h-14 object-contain drop-shadow-lg group-hover:scale-110 group-active:scale-95 transition-transform duration-300" />
+                            <p className="text-xs text-center font-medium w-full text-ellipsis overflow-hidden whitespace-nowrap px-3 py-1 flex items-center justify-center bg-black/40 backdrop-blur-md rounded-full border border-white/10 shadow-md text-gray-300 group-hover:bg-blue-600/60 group-hover:text-white group-hover:border-blue-500/50 transition-colors duration-300">{item.name}</p>
                         </li>
                     ))}
                 </ul>
