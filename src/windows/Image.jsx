@@ -14,17 +14,17 @@ const Image = ({ windowKey }) => {
     const { name, imageUrl } = data;
 
     return (
-        <div className="h-full flex flex-col bg-white rounded-lg overflow-hidden">
+        <div className="h-full flex flex-col bg-transparent rounded-lg overflow-hidden">
             <div id="window-header">
                 <WindowControls target={windowKey} />
-                <h2 className="ml-4 font-semibold text-gray-700">{name}</h2>
+                <h2 className="ml-4 font-semibold text-gray-400">{name}</h2>
             </div>
 
-            <div className="flex-1 flex items-center justify-center p-4 bg-gray-100/50">
+            <div className="flex-1 flex items-center justify-center p-4 bg-transparent backdrop-blur-sm">
                 <img
                     src={imageUrl}
                     alt={name}
-                    className="max-w-full max-h-full object-contain rounded-md shadow-sm"
+                    className="max-w-full max-h-full object-contain rounded-md shadow-2xl drop-shadow-lg"
                 />
             </div>
         </div>

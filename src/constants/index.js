@@ -398,10 +398,10 @@ const ABOUT_LOCATION = {
       subtitle: "Meet the Developer Behind the Code",
       image: "/images/Ayush.jpeg",
       description: [
-        "Hey, I'm Ayush 👋 — a Full-Stack Web Developer passionate about building sleek, high-performing digital experiences from the ground up.",
-        "I specialize in modern JavaScript ecosystems like React and Next.js, seamlessly blending technical precision with an eye for stunning, interactive design.",
-        "For me, development isn't just about making things work—it's about intuitive UX, scalable architecture, and writing clean code that doesn't require a search party to debug.",
-        "When I'm not bringing new projects to life, you'll probably find me obsessing over micro-animations, consuming an unhealthy amount of coffee, or exploring the latest design trends. 🚀",
+        "Hey, I'm Ayush 👋 — a Frontend Developer dedicated to crafting premium, high-performance web experiences.",
+        "I specialize in React, Next.js, and modern CSS/GSAP animations, bridging the gap between exceptional design and robust engineering.",
+        "My philosophy is simple: build interfaces that feel fluid, responsive, and delightful to interact with. If it's not pixel-perfect, it's not finished.",
+        "When I'm not pushing pixels or optimizing build times, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅"
       ],
     },
   ],

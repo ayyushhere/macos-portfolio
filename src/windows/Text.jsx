@@ -13,32 +13,32 @@ const Text = ({ windowKey }) => {
     const { name, image, subtitle, description } = data;
 
     return (
-        <div className="h-full flex flex-col bg-white rounded-lg overflow-hidden">
+        <div className="h-full flex flex-col bg-transparent rounded-lg overflow-hidden">
             <div id="window-header">
                 <WindowControls target={windowKey} />
-                <h2 className="ml-4 font-semibold text-gray-700">{name}</h2>
+                <h2 className="ml-4 font-semibold text-gray-400">{name}</h2>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-6 text-gray-800">
+            <div className="flex-1 overflow-y-auto p-8 text-gray-200">
                 {image && (
-                    <div className="mb-6 flex justify-center">
+                    <div className="mb-8 flex justify-center">
                         <img
                             src={image}
                             alt={name}
-                            className="rounded-lg shadow-md max-h-64 object-cover"
+                            className="rounded-xl shadow-2xl max-h-64 object-cover border border-white/10"
                         />
                     </div>
                 )}
 
                 {subtitle && (
-                    <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">
+                    <h3 className="text-3xl font-bold mb-6 text-center text-white drop-shadow-md">
                         {subtitle}
                     </h3>
                 )}
 
-                <div className="space-y-4">
+                <div className="space-y-5 max-w-3xl mx-auto">
                     {description && Array.isArray(description) && description.map((paragraph, index) => (
-                        <p key={index} className="text-lg leading-relaxed text-gray-700">
+                        <p key={index} className="text-lg leading-relaxed text-gray-300 font-medium">
                             {paragraph}
                         </p>
                     ))}
