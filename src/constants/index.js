@@ -101,50 +101,52 @@ const blogPosts = [
 
 const techStack = [
   {
+    category: "Languages",
+    items: [
+      { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+      { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
+      { name: "Java", icon: "https://cdn.simpleicons.org/openjdk/437291" },
+    ],
+  },
+  {
     category: "Frontend",
     items: [
-      { name: "React.js", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-      { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
-      { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
-    ],
-  },
-  {
-    category: "Mobile",
-    items: [
-      { name: "React Native", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-      { name: "Expo", icon: "https://cdn.simpleicons.org/expo/white" },
-    ],
-  },
-  {
-    category: "Styling",
-    items: [
-      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
-      { name: "Sass", icon: "https://cdn.simpleicons.org/sass/CC6699" },
+      { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
       { name: "CSS3", icon: "https://cdn.simpleicons.org/css3/1572B6" },
+      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+      { name: "React.js", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+      { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
+      { name: "Redux", icon: "https://cdn.simpleicons.org/redux/764ABC" },
     ],
   },
   {
     category: "Backend",
     items: [
       { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/339933" },
-      { name: "Express", icon: "https://cdn.simpleicons.org/express/white" },
-      { name: "NestJS", icon: "https://cdn.simpleicons.org/nestjs/E0234E" },
-      { name: "Hono", icon: "https://cdn.simpleicons.org/hono/E36002" },
-    ],
-  },
-  {
-    category: "Database",
-    items: [
+      { name: "PHP", icon: "https://cdn.simpleicons.org/php/777BB4" },
       { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/47A248" },
-      { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
+      { name: "Mongoose", icon: "https://cdn.simpleicons.org/mongoose/880000" },
+      { name: "Clerk", icon: "https://cdn.simpleicons.org/clerk/6C47FF" },
     ],
   },
   {
-    category: "Dev Tools",
+    category: "Tools & DevOps",
     items: [
       { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
       { name: "GitHub", icon: "https://cdn.simpleicons.org/github/white" },
       { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+      { name: "AWS", icon: "https://cdn.simpleicons.org/amazonwebservices/232F3E" },
+      { name: "Jenkins", icon: "https://cdn.simpleicons.org/jenkins/D24939" },
+      { name: "Postman", icon: "https://cdn.simpleicons.org/postman/FF6C37" },
+    ],
+  },
+  {
+    category: "Core CS",
+    items: [
+      { name: "DSA", icon: "https://cdn.simpleicons.org/leetcode/FFA116" },
+      { name: "OOPs", icon: "https://cdn.simpleicons.org/java/007396" },
+      { name: "OS & Networks", icon: "https://cdn.simpleicons.org/linux/FCC624" },
+      { name: "DBMS", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
     ],
   },
 ];
@@ -248,7 +250,7 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Agrishield",
+      name: "Agrifield",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -261,11 +263,12 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
+          subtitle: "Pest Alert System",
           description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+            "• Designed a scalable pest tracking platform using MERN Stack, enabling real-time infestation reporting for farmers and reducing response times by 40%.",
+            "• Built a centralized Admin Dashboard with Socket.IO integration to broadcast instant alerts and visualize outbreak locations, improving community awareness by 50%.",
+            "• Implemented Role-Based Access Control (RBAC) and secure image handling protocols (Multer) to manage sensitive agricultural data.",
+            "• Tech Stack: React 19, Node.js, Express 5, MongoDB, Socket.IO, Tailwind CSS, Redux, Vite."
           ],
         },
         {
@@ -274,12 +277,12 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://pest-alert-system.vercel.app",
+          href: "https://github.com/ayyushhere", // Update with actual link later
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "Agrishield.png",
+          name: "Agrifield.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
@@ -334,7 +337,7 @@ const WORK_LOCATION = {
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "Mac-OS Portfolio",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
@@ -342,35 +345,36 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "Portfolio Project.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
+          subtitle: "Mac-OS Style Portfolio",
           description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+            "• Architected a robust window management system using React 19 and Zustand, utilizing Imer to handle complex stacking contexts (z-index) and window persistence.",
+            "• Used GSAP to create 60 FPS window transitions and dock magnification with authentic macOS physics.",
+            "• Designed a scalable Higher-Order Component (HOC) pattern with Tailwind CSS, ensuring consistent native-OS behaviors (drag, resize, maximize) across all apps.",
+            "• Tech Stack: React 19, Zustand, Tailwind CSS, GSAP, Vite."
           ],
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "Live Portfolio",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "#",
+          href: "https://ayushhere.netlify.app/",
           position: "top-10 right-20",
         },
         {
           id: 4,
-          name: "food-delivery-app.png",
+          name: "portfolio.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
+          imageUrl: "/images/Ayush.jpeg", 
         },
       ],
     },
@@ -425,6 +429,51 @@ const ABOUT_LOCATION = {
         "I specialize in React, Next.js, and modern CSS/GSAP animations, bridging the gap between exceptional design and robust engineering.",
         "My philosophy is simple: build interfaces that feel fluid, responsive, and delightful to interact with. If it's not pixel-perfect, it's not finished.",
         "When I'm not pushing pixels or optimizing build times, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅"
+      ],
+    },
+    {
+      id: 5,
+      name: "Experience.txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
+      position: "top-52 left-32",
+      subtitle: "Professional Experience",
+      description: [
+        "Outlier | AI Trainer | Remote (Sep 2024 – Apr 2025)",
+        "• Evaluated and optimized AI-generated code in Java and JavaScript to improve the accuracy of Large Language Models (LLMs).",
+        "• Conducted technical review and debugging of complex code snippets, ensuring adherence to syntax and logic standards.",
+        "• Contributed to Reinforcement Learning from Human Feedback (RLHF) workflows to enhance model reasoning capabilities.",
+        "",
+        "Freelancer",
+        "• Provided independent technical consulting and development, resolving high-impact bugs and deploying scalable architecture patterns."
+      ],
+    },
+    {
+      id: 6,
+      name: "Education & Certs.txt",
+      icon: "/images/txt.png",
+      kind: "file",
+      fileType: "txt",
+      position: "top-52 left-60",
+      subtitle: "Education, Certifications & Achievements",
+      description: [
+        "🎓 EDUCATION",
+        "• Lovely Professional University | Phagwara, Punjab",
+        "  Bachelor of Technology - Computer Science and Engineering | Aug 2023 - Present (CGPA: 7.65)",
+        "• Maharishi Vidya Mandir | Fatehpur, Uttar-Pradesh",
+        "  Intermediate (76%) | Apr 2021 - Mar 2022",
+        "  Matriculation (85%) | Apr 2019 - Mar 2020",
+        "",
+        "📜 CERTIFICATES",
+        "• Cloud Computing (NPTEL)",
+        "• Google – AI Essentials (Google)",
+        "• Building Web application in PHP (Coursera)",
+        "• Responsive Web Design (FreeCodeCamp)",
+        "",
+        "🏆 ACHIEVEMENTS",
+        "• Solved 200+ coding problems across platforms like LeetCode and GeeksForGeeks.",
+        "• Achieved a maximum rating of 1000 demonstrating advanced algorithmic problem-solving."
       ],
     },
   ],
