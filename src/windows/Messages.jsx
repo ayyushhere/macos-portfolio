@@ -114,9 +114,11 @@ const Messages = ({ windowKey }) => {
                                 ? 'bg-[#2a2a2a] text-gray-200 rounded-tl-sm border border-white/5' 
                                 : 'bg-blue-600 text-white rounded-tr-sm'
                             }`}>
-                                <ReactMarkdown className="prose prose-invert prose-sm max-w-none">
-                                    {msg.text}
-                                </ReactMarkdown>
+                                <div className="prose prose-invert prose-sm max-w-none">
+                                    <ReactMarkdown>
+                                        {msg.text}
+                                    </ReactMarkdown>
+                                </div>
                             </div>
                         </div>
                     ))}

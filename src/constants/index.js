@@ -117,10 +117,10 @@ const techStack = [
   {
     category: "Frontend",
     items: [
-      { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
-      { name: "CSS3", icon: "https://cdn.simpleicons.org/css3/1572B6" },
-      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
-      { name: "React.js", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+      { name: "HTML5", icon: "https://cdn.simpleicons.org/html5" },
+      { name: "CSS3", icon: "https://cdn.simpleicons.org/css3" },
+      { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss" },
+      { name: "React.js", icon: "https://cdn.simpleicons.org/react" },
       { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178C6" },
       { name: "Redux", icon: "https://cdn.simpleicons.org/redux/764ABC" },
     ],
@@ -138,21 +138,21 @@ const techStack = [
   {
     category: "Tools & DevOps",
     items: [
-      { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+      { name: "Git", icon: "https://cdn.simpleicons.org/git" },
       { name: "GitHub", icon: "https://cdn.simpleicons.org/github/white" },
-      { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
-      { name: "AWS", icon: "https://cdn.simpleicons.org/amazonwebservices/232F3E" },
-      { name: "Jenkins", icon: "https://cdn.simpleicons.org/jenkins/D24939" },
-      { name: "Postman", icon: "https://cdn.simpleicons.org/postman/FF6C37" },
+      { name: "Docker", icon: "https://cdn.simpleicons.org/docker" },
+      { name: "AWS", icon: "https://cdn.simpleicons.org/amazonaws" },
+      { name: "Jenkins", icon: "https://cdn.simpleicons.org/jenkins" },
+      { name: "Postman", icon: "https://cdn.simpleicons.org/postman" },
     ],
   },
   {
     category: "Core CS",
     items: [
-      { name: "DSA", icon: "https://cdn.simpleicons.org/leetcode/FFA116" },
-      { name: "OOPs", icon: "https://cdn.simpleicons.org/java/007396" },
-      { name: "OS & Networks", icon: "https://cdn.simpleicons.org/linux/FCC624" },
-      { name: "DBMS", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+      { name: "DSA", icon: "https://cdn.simpleicons.org/leetcode" },
+      { name: "OOPs", icon: "https://cdn.simpleicons.org/openjdk" },
+      { name: "OS & Networks", icon: "https://cdn.simpleicons.org/linux" },
+      { name: "DBMS", icon: "https://cdn.simpleicons.org/mysql" },
     ],
   },
 ];
