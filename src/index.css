@@ -128,8 +128,7 @@ body {
   #resume,
   #finder,
   #txtfile,
-  #imgfile,
-  #messages {
+  #imgfile {
     @apply bg-[#1e1e1e]/80 backdrop-blur-3xl border border-white/10 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-gray-200;
   }
 
@@ -325,10 +324,6 @@ body {
         @apply w-full h-fit object-contain object-center;
       }
     }
-  }
-
-  #messages {
-    @apply w-[800px] h-[600px] max-w-[90vw] max-h-[85vh] absolute top-16 left-1/4 flex flex-col;
   }
 
   #home {
