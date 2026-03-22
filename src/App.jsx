@@ -41,6 +41,7 @@ const App = () => {
         <Photos />
         <Contact />
         <Home />
+        <Messages />
       </section>
       <Dock />
     </main>

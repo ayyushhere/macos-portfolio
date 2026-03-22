@@ -61,6 +61,12 @@ const dockApps = [
     canOpen: true,
   },
   {
+    id: "messages",
+    name: "Ayush AI",
+    icon: "info.svg",
+    canOpen: true,
+  },
+  {
     id: "terminal",
     name: "Skills", // was "Terminal"
     icon: "terminal.png",
@@ -587,6 +593,7 @@ const WINDOW_CONFIG = {
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  messages: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };

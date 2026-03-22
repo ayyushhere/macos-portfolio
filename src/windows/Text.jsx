@@ -7,7 +7,6 @@ const Text = ({ windowKey }) => {
     const { windows } = useWindowStore();
     const win = windows[windowKey];
     const data = win?.data;
-
     if (!data) return null;
 
     const { name, image, subtitle, description } = data;
