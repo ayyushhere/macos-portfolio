@@ -177,7 +177,7 @@ body {
   }
 
   #terminal {
-    @apply w-2xl absolute top-32 left-1/12;
+    @apply w-xl absolute top-32 left-1/12;
 
     h2 {
       @apply font-bold text-sm text-center w-full text-gray-400;

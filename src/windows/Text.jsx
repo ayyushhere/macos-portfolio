@@ -19,29 +19,31 @@ const Text = ({ windowKey }) => {
                 <h2 className="ml-4 font-semibold text-gray-400">{name}</h2>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-8 text-gray-200">
+            <div className="flex-1 overflow-y-auto p-10 text-gray-200 flex flex-col md:flex-row gap-12 items-start max-w-5xl mx-auto w-full">
                 {image && (
-                    <div className="mb-8 flex justify-center">
+                    <div className="shrink-0 w-full md:w-1/3 flex justify-center sticky top-0">
                         <img
                             src={image}
                             alt={name}
-                            className="rounded-xl shadow-2xl max-h-64 object-cover border border-white/10"
+                            className="rounded-2xl shadow-2xl w-full max-w-[250px] object-cover border border-white/20"
                         />
                     </div>
                 )}
 
-                {subtitle && (
-                    <h3 className="text-3xl font-bold mb-6 text-center text-white drop-shadow-md">
-                        {subtitle}
-                    </h3>
-                )}
+                <div className="flex-1 flex flex-col gap-6">
+                    {subtitle && (
+                        <h3 className="text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg tracking-tight">
+                            {subtitle}
+                        </h3>
+                    )}
 
-                <div className="space-y-5 max-w-3xl mx-auto">
-                    {description && Array.isArray(description) && description.map((paragraph, index) => (
-                        <p key={index} className="text-lg leading-relaxed text-gray-300 font-medium">
-                            {paragraph}
-                        </p>
-                    ))}
+                    <div className="space-y-6">
+                        {description && Array.isArray(description) && description.map((paragraph, index) => (
+                            <p key={index} className="text-base md:text-lg leading-relaxed text-gray-300/90 font-medium tracking-wide">
+                                {paragraph}
+                            </p>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
