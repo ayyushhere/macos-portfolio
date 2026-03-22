@@ -63,7 +63,7 @@ const dockApps = [
   {
     id: "messages",
     name: "Ayush AI",
-    icon: "info.svg",
+    icon: "../icons/atom.svg",
     canOpen: true,
   },
   {
