@@ -374,7 +374,7 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "img",
           position: "top-52 right-80",
-          imageUrl: "/images/Ayush.jpeg",
+          imageUrl: "/images/ayushos.png",
         },
       ],
     },

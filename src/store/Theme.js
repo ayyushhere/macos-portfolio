@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 const useThemeStore = create(
     persist(
         (set) => ({
-            wallpaper: 'dark', // default to dark wallpaper
+            wallpaper: 'dark',
             toggleWallpaper: () =>
                 set((state) => ({
                     wallpaper: state.wallpaper === 'light' ? 'dark' : 'light',
@@ -12,7 +12,7 @@ const useThemeStore = create(
             setWallpaper: (wallpaper) => set({ wallpaper }),
         }),
         {
-            name: 'wallpaper-storage', // updated storage key
+            name: 'wallpaper-storage',
         }
     )
 );

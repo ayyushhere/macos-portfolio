@@ -27,8 +27,8 @@ const Finder = () => {
             <h3>{name}</h3>
 
             <ul>
-                {items?.map((item) => {
-                    const isActive = activeLocation.id === item.id;
+                {items?.filter(Boolean).map((item) => {
+                    const isActive = activeLocation?.id === item?.id;
                     const activeClass = "bg-white/15 backdrop-blur-md border border-white/10 shadow-lg text-white";
                     const inactiveClass = "bg-transparent hover:bg-white/5 hover:text-white text-[#e6e6e6]/60 border border-transparent";
 
