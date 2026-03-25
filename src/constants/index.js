@@ -67,16 +67,16 @@ const dockApps = [
     canOpen: true,
   },
   {
+    id: "music",
+    name: "Spotify",
+    icon: "spotify.png",
+    canOpen: true,
+  },
+  {
     id: "trash",
     name: "Archive", // was "Trash"
     icon: "trash.png",
     canOpen: false,
-  },
-  {
-    id: "music",
-    name: "Spotify",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png",
-    canOpen: true,
   },
 ];
 

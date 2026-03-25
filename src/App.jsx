@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Navbar, Welcome, Dock, BootLoader } from '#components'
-import { Finder, Resume, Safari, Terminal, Text, Image as ImageWindow, Contact, Home, Photos } from '#windows';
+import { Finder, Resume, Safari, Terminal, Text, Image as ImageWindow, Contact, Home, Photos, Music } from '#windows';
 import useThemeStore from './store/Theme';
 import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
