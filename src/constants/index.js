@@ -526,11 +526,44 @@ const CERTIFICATES_LOCATION = {
   icon: "/images/folder.png",
   kind: "folder",
   children: [
-    { id: 1, name: "Cloud Computing - NPTEL", icon: "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/NPTEL_logo.svg/1200px-NPTEL_logo.svg.png", kind: "file", fileType: "url", href: "https://nptel-url-here.com", position: "top-10 left-5" },
-    { id: 2, name: "AI Essentials - Google", icon: "https://cdn.simpleicons.org/google/4285F4", kind: "file", fileType: "url", href: "https://google-ai-url-here.com", position: "top-10 left-36" },
-    { id: 3, name: "PHP Web App - Coursera", icon: "https://cdn.simpleicons.org/coursera/0056D2", kind: "file", fileType: "url", href: "https://coursera-url-here.com", position: "top-10 right-20" },
-    { id: 4, name: "Responsive Web - FCC", icon: "https://cdn.simpleicons.org/freecodecamp/0A0A23", kind: "file", fileType: "url", href: "https://fcc-url-here.com", position: "top-40 left-5" },
-  ]
+    "https://drive.google.com/open?id=1HalBOQVaf4FEmgEy1oA4NUXZqmv02eO_&usp=drive_copy",
+    "https://drive.google.com/open?id=1_kDgVJ8uamMrXckMgzsY3iCXqiQ6b_tg&usp=drive_copy",
+    "https://drive.google.com/open?id=1q0yPZIBYjv8v4WOANkdI3y7Dg4S2ADdK&usp=drive_copy",
+    "https://drive.google.com/open?id=1X76ezmxCDnQ1P3bqTksbnZ11O4Q5_oMg&usp=drive_copy",
+    "https://drive.google.com/open?id=14XidKm77_2lVT_WK-D9oXxeasL7jSHxq&usp=drive_copy",
+    "https://drive.google.com/open?id=1ntyubdeMOTVesR4HtHKlYSah0DrThJzW&usp=drive_copy",
+    "https://drive.google.com/open?id=1LDzcjwoL3lQottnJXX4_QivGWdd1y_2H&usp=drive_copy",
+    "https://drive.google.com/open?id=1qNc_NEHAkmoCyxj9WYBbaMGx0ucCMtK0&usp=drive_copy",
+    "https://drive.google.com/open?id=15lbCMeYX6tT6tA302vSA27c3nRg0juHI&usp=drive_copy",
+    "https://drive.google.com/open?id=11cdqbnz4Bnv08ort4xOcKn9OKrvfdusf&usp=drive_copy",
+    "https://drive.google.com/open?id=1LqLWihkJ0KveKTb-7llaqBIA_yYZTX_d&usp=drive_copy",
+    "https://drive.google.com/open?id=1ZTi8_9tbEhCctcwx_7hEnmdwp7g5RR4g&usp=drive_copy",
+    "https://drive.google.com/open?id=1pe8fSBCFL0-Od7B2kxhzfMEcIQulSEb5&usp=drive_copy",
+    "https://drive.google.com/open?id=1tHNFoFT8d4xmooEYHv8wQQPt7rHB6X7g&usp=drive_copy",
+    "https://drive.google.com/open?id=1-Za6nWrZL2wKbJerUah8DW_l404Z0fBS&usp=drive_copy",
+    "https://drive.google.com/open?id=10Crpy961irUA08TUepM5pIDLuwAOJ09T&usp=drive_copy",
+    "https://drive.google.com/open?id=1o7XbSlXU7N52VK-sBGkhg5thK74dQ1wG&usp=drive_copy",
+    "https://drive.google.com/open?id=1CR-EwnM1k1um4EX-gHkIMccoS_WfmhVh&usp=drive_copy",
+    "https://drive.google.com/open?id=1W6WHRoyuREiiw5HSLMx4MRLn1qxzCLm4&usp=drive_copy",
+    "https://drive.google.com/open?id=15qOFH9W3Araqgg5jmIKOk0YQVa5PmP6L&usp=drive_copy",
+    "https://drive.google.com/open?id=1T4Nvxyt6qiL0sCeJwqoqywDnpCMNPYpd&usp=drive_copy",
+    "https://drive.google.com/open?id=1K7qVJh4zl3ixEpNjIYMMVv75qkxy_SYj&usp=drive_copy",
+    "https://drive.google.com/open?id=1dof7sZg5qSiSNOnDnXjKn5B_fV0mHHpY&usp=drive_copy",
+    "https://drive.google.com/open?id=1zlEicr9k98SvnroGp03UydkiJepTSeFl&usp=drive_copy",
+    "https://drive.google.com/open?id=1V8y2fNByBhp_CQDQXc72Qk_z2vSckPIB&usp=drive_copy",
+    "https://drive.google.com/open?id=1SwlEMexUs4RPsOJ5S9-bPoKJPF97Pc40&usp=drive_copy",
+    "https://drive.google.com/open?id=1slJLn5lFo6850nbLbm6IUQ8rTBi-t4qY&usp=drive_copy",
+    "https://drive.google.com/open?id=1VDyaZk_jU2a8yV-HzOUhPBPxFdab6eF8&usp=drive_copy",
+    "https://drive.google.com/open?id=1U5z6FBBrUQgOmVhf0Ipor2MiYmBZF2fH&usp=drive_copy",
+    "https://drive.google.com/open?id=17vK8Q68F_1aRrvvCe9IJQXs90jgQWRQT&usp=drive_copy"
+  ].map((link, i) => ({
+    id: i + 1,
+    name: `Certificate ${i + 1}`,
+    icon: "/images/pdf.png",
+    kind: "file",
+    fileType: "url",
+    href: link
+  }))
 };
 
 const EDUCATION_LOCATION = {
