@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Oversized Files
+public/certificates/Outskill_AI_MAstermind.pdf

@@ -75,7 +75,7 @@ const dockApps = [
   {
     id: "certificates",
     name: "Certifications",
-    icon: "folder.png",
+    icon: "Certificates.png",
     canOpen: true,
   },
   {
@@ -289,7 +289,7 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://github.com/ayyushhere", // Update with actual link later
+          href: "https://pest-alert-system.vercel.app/", // Update with actual link later
           position: "top-10 right-20",
         },
         {
@@ -320,9 +320,12 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
+          subtitle: "E-Commerce Clothing Platform",
           description: [
-            "Full-Stack Clothing E-Commerce Website built with React, Node.js, Express, and MongoDB.",
-            "Includes a stunning frontend store, completely protected admin panel, and live order tracking.",
+            "• Developed a comprehensive Full-Stack E-Commerce platform using the MERN stack, featuring a responsive storefront and an integrated admin dashboard.",
+            "• Implemented secure JWT-based authentication and Stripe payment integration for seamless, high-confidence user transactions.",
+            "• Built a real-time order tracking system with automated status updates, improving customer post-purchase experience by 35%.",
+            "• Tech Stack: React, Node.js, Express, MongoDB, Tailwind CSS, Redux Toolkit, Stripe API."
           ],
         },
         {

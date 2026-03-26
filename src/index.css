@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
 @import "tailwindcss";
 
@@ -14,10 +14,13 @@ body {
   /* Fallback for dark theme */
   color: white;
   /* Enforce global white text */
+  font-family: "Georama", sans-serif;
 }
 
 @theme {
   --font-georama: "Georama", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
   --font-roboto: "Roboto Mono", monospace;
   --breakpoint-3xl: 1920px;
 }
@@ -140,6 +143,18 @@ body {
     }
   }
 
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-300 to-gray-500;
+  }
+
+  .premium-heading {
+    @apply tracking-[-0.02em] font-black;
+  }
+
   #window-header {
     @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-[#2e2e2e]/60 backdrop-blur-xl border-b border-black/20 select-none text-sm text-gray-400 font-medium shadow-sm;
   }
@@ -150,6 +165,7 @@ body {
   #photos,
   #resume,
   #finder,
+  #certificates,
   #txtfile,
   #imgfile {
     @apply bg-[#1e1e1e]/80 backdrop-blur-3xl border border-white/10 shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden text-gray-200;
@@ -245,6 +261,10 @@ body {
     h2 {
       @apply font-bold text-sm text-center flex-1 text-gray-400;
     }
+  }
+
+  #certificates {
+    @apply w-[1000px] h-[650px] absolute top-20 left-[12%];
   }
 
   #photos {
