@@ -1,24 +1,23 @@
 import React from 'react';
 import { WindowControls } from '#components';
 import WindowWrapper from '#hoc/WindowWrapper';
-import { locations } from '#constants';
+import { CERTIFICATES_LOCATION } from '#constants';
 import useWindowStore from '#store/Windows';
 import { Search, Trophy, ExternalLink, Image as ImageIcon, FileText } from 'lucide-react';
 
 const Certificates = () => {
     const { openWindow } = useWindowStore();
-    const certificates = locations.certificates.children;
+    const certificates = CERTIFICATES_LOCATION.children;
 
     const getOrgLogo = (name) => {
         const n = name.toLowerCase();
-        if (n.includes('google')) return 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg';
-        if (n.includes('coursera')) return 'https://www.vectorlogo.zone/logos/coursera/coursera-icon.svg';
-        if (n.includes('udemy')) return 'https://www.vectorlogo.zone/logos/udemy/udemy-icon.svg';
-        if (n.includes('ibm')) return 'https://www.vectorlogo.zone/logos/ibm/ibm-icon.svg';
-        if (n.includes('freecodecamp')) return 'https://www.vectorlogo.zone/logos/freecodecamp/freecodecamp-icon.svg';
-        if (n.includes('linkedin')) return 'https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg';
-        if (n.includes('nptel')) return 'https://nptel.ac.in/assets/img/nptel_logo.png';
-        if (n.includes('cipherschools')) return 'https://www.cipherschools.com/static/media/Cipherschools_icon@2x.3b3d9c7e.png';
+        if (n.includes('google')) return 'https://www.google.com/favicon.ico';
+        if (n.includes('coursera')) return 'https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/v2/favicon-v2-32x32.png';
+        if (n.includes('udemy')) return 'https://www.udemy.com/static/images/favicon-32x32.png';
+        if (n.includes('ibm')) return 'https://www.ibm.com/favicon.ico';
+        if (n.includes('freecodecamp')) return 'https://www.freecodecamp.org/favicon.ico';
+        if (n.includes('linkedin')) return 'https://static.licdn.com/sc/h/alpkbtemzxbshw9spqzq6qncy';
+        if (n.includes('nptel')) return 'https://nptel.ac.in/assets/img/favicon.ico';
         return null;
     };
 

@@ -524,7 +524,7 @@ const mappedCerts = certFiles.map((file, i) => {
   };
 });
 
-const CERTIFICATES_LOCATION = {
+export const CERTIFICATES_LOCATION = {
   id: 6,
   type: "certificates",
   name: "Certificates",
