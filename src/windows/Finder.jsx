@@ -9,7 +9,7 @@ import useWindowStore from '#store/Windows'
 
 const Finder = () => {
 
-    const { openWindow } = useWindowStore();
+    const { openWindow, isMobile } = useWindowStore();
     const { activeLocation, setActiveLocation } = useLocationStore();
 
     const openItem = (item) => {
@@ -52,14 +52,16 @@ const Finder = () => {
                 <Search className="icon" />
             </div>
 
-            <div className='flex h-full'>
-                <div className='sidebar overflow-y-auto'>
-                    {renderList("Favorites", Object.values(locations))}
-                    {renderList("Projects", locations.work.children)}
-                </div>
-                <ul className='content flex-1 p-6 flex flex-wrap gap-6 items-start content-start overflow-y-auto bg-transparent relative z-10'>
+            <div className='flex h-full overflow-hidden'>
+                {!isMobile && (
+                    <div className='sidebar overflow-y-auto shrink-0'>
+                        {renderList("Favorites", Object.values(locations))}
+                        {renderList("Projects", locations.work.children)}
+                    </div>
+                )}
+                <ul className={`content flex-1 p-6 flex flex-wrap ${isMobile ? 'gap-4 justify-center' : 'gap-6'} items-start content-start overflow-y-auto bg-transparent relative z-10 custom-scrollbar`}>
                     {activeLocation?.children?.map((item) => (
-                        <li key={item.id} className="flex flex-col items-center gap-2 p-3 w-32 rounded-2xl border border-transparent hover:bg-white/10 hover:border-white/15 hover:shadow-2xl hover:backdrop-blur-md transition-all duration-300 cursor-pointer group" onClick={() => openItem(item)}>
+                        <li key={item.id} className={`flex flex-col items-center gap-2 p-3 ${isMobile ? 'w-24' : 'w-32'} rounded-2xl border border-transparent hover:bg-white/10 hover:border-white/15 hover:shadow-2xl hover:backdrop-blur-md transition-all duration-300 cursor-pointer group`} onClick={() => openItem(item)}>
                             <div className="w-16 h-16 bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg rounded-2xl flex items-center justify-center group-hover:scale-110 group-active:scale-95 transition-all duration-300">
                                 <img src={item.icon} alt={item.name} className="w-10 h-10 object-contain drop-shadow-md" />
                             </div>

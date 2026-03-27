@@ -6,7 +6,7 @@ import useWindowStore from '#store/Windows';
 import { Search, Trophy, ExternalLink, FileText, ShieldCheck } from 'lucide-react';
 
 const Certificates = () => {
-    const { openWindow } = useWindowStore();
+    const { openWindow, isMobile } = useWindowStore();
     const certificates = CERTIFICATES_LOCATION.children;
 
     const getOrgBranding = (name) => {
@@ -132,8 +132,8 @@ const Certificates = () => {
                 </h2>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-12 custom-scrollbar select-none bg-[radial-gradient(circle_at_50%_0%,rgba(30,58,138,0.05),transparent)]">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+            <div className={`flex-1 overflow-y-auto ${isMobile ? 'p-6' : 'p-12'} custom-scrollbar select-none bg-[radial-gradient(circle_at_50%_0%,rgba(30,58,138,0.05),transparent)]`}>
+                <div className={`grid gap-8 ${isMobile ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'}`}>
                     {certificates.map((cert) => {
                         const brand = getOrgBranding(cert.name);
 

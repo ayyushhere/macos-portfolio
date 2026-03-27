@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Navbar, Welcome, Dock, BootLoader } from '#components'
 import { Finder, Resume, Safari, Terminal, Text, Image as ImageWindow, Contact, Home, Photos, Music, Certificates } from '#windows';
 import useThemeStore from './store/Theme';
+import useWindowStore from './store/Windows';
 import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
 
@@ -9,8 +10,19 @@ import { Draggable } from 'gsap/Draggable';
 gsap.registerPlugin(Draggable);
 
 const App = () => {
+  const { setIsMobile } = useWindowStore();
   const { wallpaper } = useThemeStore();
   const [isBooting, setIsBooting] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [setIsMobile]);
 
   useEffect(() => {
     // Enforce dark mode

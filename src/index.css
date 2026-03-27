@@ -46,10 +46,10 @@ body {
     @apply flex justify-between items-center bg-gray-900/40 backdrop-blur-2xl p-2 px-5 select-none border-b border-white/5;
 
     div {
-      @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
+      @apply flex items-center max-sm:w-full max-sm:justify-between gap-5;
 
       &:last-child {
-        @apply max-sm:hidden;
+        @apply max-sm:flex;
       }
     }
 
@@ -96,7 +96,7 @@ body {
   }
 
   #welcome {
-    @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
+    @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none h-full w-full px-10 max-sm:px-6;
 
     .small-screen {
       @apply sm:hidden m-7 bg-red-900/50 backdrop-blur-lg p-3 rounded-md absolute top-10 border border-red-500/30;
@@ -108,10 +108,10 @@ body {
   }
 
   #dock {
-    @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
+    @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none transition-all duration-300 max-sm:bottom-2 max-sm:scale-90 max-sm:transform-gpu;
 
     .dock-container {
-      @apply bg-black/40 backdrop-blur-2xl justify-between rounded-2xl p-1.5 flex items-end gap-1.5 border border-white/10 shadow-2xl;
+      @apply bg-black/40 backdrop-blur-3xl justify-between rounded-2xl p-1.5 flex items-end gap-1.5 border border-white/10 shadow-2xl max-sm:p-1 max-sm:gap-1 max-sm:rounded-xl;
     }
 
     .tooltip {
@@ -135,11 +135,11 @@ body {
     }
 
     .minimize {
-      @apply size-3.5 rounded-full bg-[#febc2e] border border-[#dba023] cursor-pointer hover:brightness-90;
+      @apply size-3.5 rounded-full bg-[#febc2e] border border-[#dba023] cursor-pointer hover:brightness-90 max-sm:hidden;
     }
 
     .maximize {
-      @apply size-3.5 rounded-full bg-[#28c840] border border-[#1aa42f] cursor-pointer hover:brightness-90;
+      @apply size-3.5 rounded-full bg-[#28c840] border border-[#1aa42f] cursor-pointer hover:brightness-90 max-sm:hidden;
     }
   }
 

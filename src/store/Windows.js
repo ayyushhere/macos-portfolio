@@ -6,6 +6,11 @@ const useWindowStore = create(
     immer((set) => ({
         windows: WINDOW_CONFIG,
         nextZIndex: INITIAL_Z_INDEX + 1,
+        isMobile: false,
+
+        setIsMobile: (mobile) => set((state) => {
+            state.isMobile = mobile;
+        }),
 
         openWindow: (windowKey, data = null) => set((state) => {
            const win = state.windows[windowKey];

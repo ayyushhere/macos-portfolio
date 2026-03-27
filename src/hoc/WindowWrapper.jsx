@@ -10,7 +10,7 @@ import { Draggable } from 'gsap/Draggable'
 const WindowWrapper = (Component, windowKey) => {
 
   const Wrapped = (props) => {
-    const { focusWindow, windows } = useWindowStore();
+    const { focusWindow, windows, isMobile } = useWindowStore();
     const { isOpen, zIndex, isMaximized, isMinimized } = windows[windowKey];
     const ref = useRef(null);
 
@@ -34,8 +34,7 @@ const WindowWrapper = (Component, windowKey) => {
     }, [isOpen]);
 
     useGSAP(() => {
-      const el = ref.current;
-      if (!el) return;
+      if (isMobile) return;
 
       const [instance] = Draggable.create(el, {
         onPress: () => focusWindow(windowKey),
@@ -52,11 +51,11 @@ const WindowWrapper = (Component, windowKey) => {
       el.style.display = isOpen && !isMinimized ? "block" : "none";
     }, [isOpen, isMinimized]);
 
-    const maximizeStyle = isMaximized ? {
+    const maximizeStyle = (isMaximized || isMobile) ? {
       top: 0,
       left: 0,
-      width: '100%',
-      height: '100%',
+      width: '100vw',
+      height: isMobile ? 'calc(100vh - 80px)' : '100%', // Adjust for navbar/dock on mobile if needed
       transform: 'none !important',
       zIndex
     } : { zIndex };
@@ -70,7 +69,7 @@ const WindowWrapper = (Component, windowKey) => {
       id={windowKey}
       ref={ref}
       style={maximizeStyle}
-      className={`absolute ${isMaximized ? '!transform-none !w-full !h-full !top-0 !left-0' : ''}`}
+      className={`absolute ${(isMaximized || isMobile) ? '!transform-none !w-full !h-full !top-0 !left-0' : ''}`}
     >
       <Component {...props} windowKey={windowKey} />
     </section>
